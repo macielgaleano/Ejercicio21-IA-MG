@@ -1,6 +1,5 @@
 const mysql = require('mysql2');
 const axios = require('axios');
-const config = require('../configs/db_config');
 const { Sequelize, Model, DataTypes } = require('sequelize');
 const sequelize = require('./sequelize');
 

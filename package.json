@@ -18,6 +18,7 @@
   "homepage": "https://github.com/finalstory2/Ejercicio21-IA-MG#readme",
   "dependencies": {
     "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
