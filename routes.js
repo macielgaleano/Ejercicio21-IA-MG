@@ -8,7 +8,8 @@ module.exports = function(app){
     res.redirect('/articulos');
   });
 
-  app.get('/articulos', (req,res) => {
-    article_controller.index(req,res);
+  app.get('/articulos', async(req,res) => {
+    res.render('pages/home.view.ejs', {articles:  await article_controller.index(req,res) })
   })
+  
  }

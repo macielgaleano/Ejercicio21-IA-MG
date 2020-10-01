@@ -11,7 +11,6 @@ module.exports = {
   index: async(req,res) => {
     const articles = await Article.findAll({
     })
-    console.log(articles)
     return articles;
   },
   load_db: (quantity) => {
