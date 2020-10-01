@@ -1,26 +1,26 @@
-require('dotenv').config();
-const express = require('express');
-// const fetch = require("node-fetch");
+require("dotenv").config();
+const express = require("express");
 const app = express();
-
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-require('./routes.js')(app);
 app.use(express.static("public"));
-const mysql2 = require('mysql2');
-const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = require('./models/sequelize');
+const mysql2 = require("mysql2");
+require("./models/author_sequalize.js");
+require("./models/comment_sequalize.js");
+const sequelize = require("./models/sequelize");
+const routes = require("./routes.js");
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
-app.listen(process.env.APP_PORT, function (){
-  sequelize.sync({force: false})
+sequelize
+  .sync({ force: false })
   .then(() => {
-    console.log('echoTestSequelize: Connected')
+    console.log("echoTestSequelize: Connected");
   })
-  .catch(error => {
-    console.log('echoTestSequelizeError: ', error)
-  })
-});
+  .catch((error) => {
+    console.log("echoTestSequelizeError: ", error);
+  });
+routes(app);
 
+app.listen(3000, function () {});
