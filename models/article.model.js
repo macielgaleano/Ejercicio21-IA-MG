@@ -13,11 +13,11 @@ module.exports = {
     })
   },
   article_index: (req,res) => {
-    Article.findAll()
-    .then(users => users.json)
-    .then(users => {
-      return users
+    Article.findAll({
+      // attributes:[ 'id_articulo'] 
     })
+    .then(users => { 
+      return users  })
     .catch(error => {
       return error
     })
