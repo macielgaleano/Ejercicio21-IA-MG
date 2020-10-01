@@ -1,6 +1,6 @@
 const mysql = require('mysql2');
 const axios = require('axios');
-const { Sequelize, Model, DataTypes } = require('sequelize');
+const { Sequelize, Model, DataTypes, Op} = require('sequelize');
 const sequelize = require('./sequelize');
 var faker = require('faker');
 faker.locale = "es_MX";
@@ -10,6 +10,9 @@ const { random } = require('./sequelize');
 module.exports = {
   index: async(req,res) => {
     const articles = await Article.findAll({
+      where: {
+        // [Op.lt]: 6
+      }
     })
     return articles;
   },

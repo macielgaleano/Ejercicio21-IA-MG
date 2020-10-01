@@ -3,7 +3,6 @@ const sequelize = require('./sequelize');
 
 class Article extends Model{}
 Article.init({
-  id_articulo: DataTypes.INTEGER,
   titulo: DataTypes.STRING(100),
   contenido: DataTypes.STRING(2000),
   fecha_creacion: DataTypes.DATE,
@@ -13,8 +12,7 @@ Article.init({
   sequelize,
   modelName: 'articulo',
   timestamps: false,
-})
-Article.removeAttribute('id');
+});
 
 
 module.exports = Article;
