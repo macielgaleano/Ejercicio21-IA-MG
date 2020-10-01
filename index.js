@@ -9,7 +9,7 @@ const sequelize = require('./models/sequelize');
 
 app.set('view engine', 'ejs');
 
-app.listen(4000, function (){
+app.listen(5000, function (){
   sequelize.sync({force: true})
   .then(() => {
     console.log('echoTestSequelize: Connected')

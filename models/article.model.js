@@ -11,7 +11,9 @@ module.exports = {
   index: async(req,res) => {
     const articles = await Article.findAll({
       where: {
-        // [Op.lt]: 6
+        id: {
+          [Op.lte]: 6
+        } 
       }
     })
     return articles;
