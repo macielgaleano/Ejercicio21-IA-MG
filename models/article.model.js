@@ -26,8 +26,8 @@ module.exports = {
         id_articulo: faker.random.number() ,
         titulo: faker.name.title(),
         contenido: faker.lorem.words(100),
-        fecha_creacion: faker.time.recent(),
-        imagen: faker.image.people(),
+        fecha_creacion: `${faker.image.nature()}?random=${Date.now()}`,
+        imagen: faker.image.nature(),
         id_autor: faker.random.arrayElement([1,2,3,4,5]) 
        ,
       });

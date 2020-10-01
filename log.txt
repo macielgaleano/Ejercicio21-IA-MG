@@ -1,0 +1,91 @@
+[33m[nodemon] 2.0.4[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+Executing (default): CREATE TABLE IF NOT EXISTS `autors` (`id` INTEGER NOT NULL auto_increment , `nombre` VARCHAR(100), `apellido` VARCHAR(100), `email` VARCHAR(100), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `autors`
+Executing (default): CREATE TABLE IF NOT EXISTS `comentarios` (`id` INTEGER NOT NULL auto_increment , `comentario` VARCHAR(100), `id_articulo` INTEGER, `autor_comentario` VARCHAR(100), `fecha_comentario` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `comentarios`
+Executing (default): CREATE TABLE IF NOT EXISTS `articulos` (`id` INTEGER NOT NULL auto_increment , `titulo` VARCHAR(100), `contenido` VARCHAR(2000), `fecha_creacion` DATETIME, `imagen` VARCHAR(10000), `id_autor` INTEGER, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `articulos`
+echoTestSequelize: Connected
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+Executing (default): CREATE TABLE IF NOT EXISTS `autors` (`id` INTEGER NOT NULL auto_increment , `nombre` VARCHAR(100), `apellido` VARCHAR(100), `email` VARCHAR(100), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `autors`
+Executing (default): CREATE TABLE IF NOT EXISTS `comentarios` (`id` INTEGER NOT NULL auto_increment , `comentario` VARCHAR(100), `id_articulo` INTEGER, `autor_comentario` VARCHAR(100), `fecha_comentario` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `comentarios`
+Executing (default): CREATE TABLE IF NOT EXISTS `articulos` (`id` INTEGER NOT NULL auto_increment , `titulo` VARCHAR(100), `contenido` VARCHAR(2000), `fecha_creacion` DATETIME, `imagen` VARCHAR(10000), `id_autor` INTEGER, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `articulos`
+echoTestSequelize: Connected
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+Executing (default): CREATE TABLE IF NOT EXISTS `autors` (`id` INTEGER NOT NULL auto_increment , `nombre` VARCHAR(100), `apellido` VARCHAR(100), `email` VARCHAR(100), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `autors`
+Executing (default): CREATE TABLE IF NOT EXISTS `comentarios` (`id` INTEGER NOT NULL auto_increment , `comentario` VARCHAR(100), `id_articulo` INTEGER, `autor_comentario` VARCHAR(100), `fecha_comentario` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `comentarios`
+Executing (default): CREATE TABLE IF NOT EXISTS `articulos` (`id` INTEGER NOT NULL auto_increment , `titulo` VARCHAR(100), `contenido` VARCHAR(2000), `fecha_creacion` DATETIME, `imagen` VARCHAR(10000), `id_autor` INTEGER, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `articulos`
+echoTestSequelize: Connected
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+Executing (default): CREATE TABLE IF NOT EXISTS `autors` (`id` INTEGER NOT NULL auto_increment , `nombre` VARCHAR(100), `apellido` VARCHAR(100), `email` VARCHAR(100), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `autors`
+Executing (default): CREATE TABLE IF NOT EXISTS `comentarios` (`id` INTEGER NOT NULL auto_increment , `comentario` VARCHAR(100), `id_articulo` INTEGER, `autor_comentario` VARCHAR(100), `fecha_comentario` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `comentarios`
+Executing (default): CREATE TABLE IF NOT EXISTS `articulos` (`id` INTEGER NOT NULL auto_increment , `titulo` VARCHAR(100), `contenido` VARCHAR(2000), `fecha_creacion` DATETIME, `imagen` VARCHAR(10000), `id_autor` INTEGER, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `articulos`
+echoTestSequelize: Connected
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+Executing (default): CREATE TABLE IF NOT EXISTS `autors` (`id` INTEGER NOT NULL auto_increment , `nombre` VARCHAR(100), `apellido` VARCHAR(100), `email` VARCHAR(100), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `autors`
+Executing (default): CREATE TABLE IF NOT EXISTS `comentarios` (`id` INTEGER NOT NULL auto_increment , `comentario` VARCHAR(100), `id_articulo` INTEGER, `autor_comentario` VARCHAR(100), `fecha_comentario` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `comentarios`
+Executing (default): CREATE TABLE IF NOT EXISTS `articulos` (`id` INTEGER NOT NULL auto_increment , `titulo` VARCHAR(100), `contenido` VARCHAR(2000), `fecha_creacion` DATETIME, `imagen` VARCHAR(10000), `id_autor` INTEGER, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `articulos`
+echoTestSequelize: Connected
+[33m[nodemon] 2.0.4[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+Executing (default): CREATE TABLE IF NOT EXISTS `autors` (`id` INTEGER NOT NULL auto_increment , `nombre` VARCHAR(100), `apellido` VARCHAR(100), `email` VARCHAR(100), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `autors`
+Executing (default): CREATE TABLE IF NOT EXISTS `comentarios` (`id` INTEGER NOT NULL auto_increment , `comentario` VARCHAR(100), `id_articulo` INTEGER, `autor_comentario` VARCHAR(100), `fecha_comentario` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `comentarios`
+Executing (default): CREATE TABLE IF NOT EXISTS `articulos` (`id` INTEGER NOT NULL auto_increment , `titulo` VARCHAR(100), `contenido` VARCHAR(2000), `fecha_creacion` DATETIME, `imagen` VARCHAR(10000), `id_autor` INTEGER, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `articulos`
+echoTestSequelize: Connected
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+Executing (default): CREATE TABLE IF NOT EXISTS `autors` (`id` INTEGER NOT NULL auto_increment , `nombre` VARCHAR(100), `apellido` VARCHAR(100), `email` VARCHAR(100), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `autors`
+Executing (default): CREATE TABLE IF NOT EXISTS `comentarios` (`id` INTEGER NOT NULL auto_increment , `comentario` VARCHAR(100), `id_articulo` INTEGER, `autor_comentario` VARCHAR(100), `fecha_comentario` DATETIME, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `comentarios`
+Executing (default): CREATE TABLE IF NOT EXISTS `articulos` (`id` INTEGER NOT NULL auto_increment , `titulo` VARCHAR(100), `contenido` VARCHAR(2000), `fecha_creacion` DATETIME, `imagen` VARCHAR(10000), `id_autor` INTEGER, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `articulos`
+echoTestSequelize: Connected
+Executing (default): INSERT INTO `articulos` (`id`,`titulo`,`contenido`,`fecha_creacion`,`imagen`,`id_autor`) VALUES (NULL,'Heredado Grupo Planificador','Abacorar Gemiquear Cenaoscuras Engarfiar Incrédulo Cencío Ficticio Cencerreo Descerco Cencuate Incorrecto Cendradilla Incruentamente Gémino Deschavetado Cencerrear Descifre Cencellada Incriminación Generalidad Cenceñada Cenegar Geminar Abaldonadamente Engargolado Batallón Geminación Incrédulo Descerrajar Abalanzar Cencero Descerebrado Cenceñada Genciana Cencero Engastar Gemoterapia Increado Descerrajado Basurero Geminado Engastador Abacial Genciana Incorrupción Engarrar Fido Engarzar Descervigar Increpación Abada Incremento Incrasar Cenceñada Fidalgo Abada Ficticio Gemiqueo Increpador Gemoso Incrementar Batanear Descifrador Incorruptibilidad Céndea Descerrajadura Cencerrillas Batallador Engargolar Engarzar Descenso Cenagar Deschavetado Descerebración Incriminar Cencerra Deschavetarse Engarrafador Cencivera Generalísimo Descentralización Abajo Fideicomisario Incorrección Geminado Fiducia Gemólogo Engaste Gen Batalla Engastar Desciframiento Abacial Gemólogo Batallaroso Engarzar Batallola Incorrupción Abajamiento Cendrazo','2020-10-01 19:59:03','http://placeimg.com/640/480/people',2),(NULL,'Adelante Cuentas Ejecutivo','Fideísmo Engarro Engastar Descerco Engarrafador Batallar Géminis Bastonazo Batalloso Cenegar Incrasar Abaldonamiento Descenso Bata Incorporeidad Cenco Batea Gendarme Gemólogo Genealogía Incristalizable Cenestesia Incrustación Cenegar Incorregibilidad Batea Incrustación Fidelidad Abajeño Gemiqueo Descerezar Cencero Cencivera Cenceño Incorporo Batallón Batatazo Cencío Abalaustrado Descharchar Generacional Incorrupto Fichaje Engarrar Bastonero Gemólogo Engargolar Engarbarse Cencerrada Engasgarse Geneático Gemiqueo Abacora Cencuate Descerezar Engastadura Abalar Generacional Bate Cendolilla Gemoso Fido Geminado Descifre Cendalí Abad Engarzar Engarrafar Engaste Cencido Cencerril Batayola Genearca Incrasar Engargantadura Cencío Fichaje Generable Descerar Engasgarse Bátavo Abadiado Abacorar Abadengo Cendrada Fido Descentrar Fidelísimo Gemíparo Engarronar Abajeño Engarzar Descercar Batatazo Descerrajadura Batavia Engargantar Géminis Abadengo Cendra','2020-10-01 19:59:03','http://placeimg.com/640/480/people',5),(NULL,'Producto Paradigma Relacciones','Cendradilla Abacorar Fidelísimo Cendolilla Cencío Abalaustrado Engastador Batata Cencido Bateador Bastonear Abadiado Cencerro Increpación Ficción Cenero Fido Batalán Descerco Incristalizable Geminar Cendrada Cendradilla Abadía Abad Batato Engasgarse Cenagoso Incrustación Engargolado Abajo Gémino Desceñir Abadía Engaste Fiducia Batalla Batallola Cenefa Desciframiento Batallador Abalar Genealógico Genealógico Géminis Incriminación Incorpóreo Descercado Cenata Desceñir Abajera Descerebrado Abaldonamiento Incorporeidad General Batallaroso Abaldonamiento Incorrupto Incorrupción Abacalero Incriminar Descepar Fidedigno Increado Abacero Incorporalmente Incrementar Engaste Incrustación Abalada Cencha Batallona Gemoterapia Abadejo Cencivera Batallona Batanear Cendrazo Desciframiento Incorregibilidad Basura Deschapar Ficción Abad Incrasar Gemonias Fideicomiso Abadía Engargolar Bastonear Abacalero Engargolar Cencerrada Increíble Increíble Abalada Bateaguas Engarrar Incorporeidad Batallola','2020-10-01 19:59:03','http://placeimg.com/640/480/people',2);
+Executing (default): SELECT `id`, `titulo`, `contenido`, `fecha_creacion`, `imagen`, `id_autor` FROM `articulos` AS `articulo` WHERE `articulo`.`id` <= 6;
+Executing (default): INSERT INTO `articulos` (`id`,`titulo`,`contenido`,`fecha_creacion`,`imagen`,`id_autor`) VALUES (NULL,'Interno Seguro Funcionario','Engarrafador Géminis Cencerrear Cenal Batallona Abadengo Batalloso Incorrección Cenceño Batanear Gemoterapia Descerezar Abalaustrado Engarro Batalla Cenaoscuras Generable Descifrable Cendrada Batán Gemoterapia Gen Fidelísimo Incorrecto Abacería Cencapa Increpación Cenagoso Batallón Abajeño Descensión Incredulidad Abajera Batallador Cenefa Cenagoso Incorregible Engastadura Descentrado Incorruptamente Ficoideo Batalloso Engargolar Generalísimo Gencianeo Incremento Engarrotar Deschapar Generalato Engarrafar Cencío Engarrafar Cencido Batallola Engastador Batazo Incorruptamente Abadesa Basural Geminar Incorporeidad Gen Cendradilla Abadía Descifrar Engastadura Engarronar Cenestesia Abalaustrado Incruentamente Céndea Gemólogo Gemoso Gen Engarzar Ceneque Genciana Cencerrado Engargante Cendalí Deschavetado Abajera Engastador Batacazo Descervigar Cendrazo Geminar Abacero Batacazo Basurear Gemiqueo Fido Incrementar Descharchar Engargolar Incorrupción Ficción Descerebrar Descerezar Cendrar','2020-10-01 20:00:12','http://placeimg.com/640/480/people',1),(NULL,'Jefe Investigación Representante','Generación Engarmarse Generalidad Descentrado Descepar Engarro Fidelidad Abadernar Incredibilidad Cencerro Bástulo Descercado Abalanzar Gemíparo Incruentamente Abada Ceñar Gen Batacazo Fichar Engarmarse Incorporalmente Abacalero Gemoterapia Cencha Descimbrar Batalla Abalaustrado Batanga Batanga Abadesa Ficticio Cenagoso Gencianeo Fideicomitente Cendrada Bastonazo Geminar Abadí Batazo Engarro Cenal Cenagoso Basura Cenca Engastador Descentrar Batato Abajamiento Abalada Basural Incorpóreo Cenegar Cenestesia Cencerrón Engargantar Descervigamiento Abada Descerezar Bástulo Generalísimo Cencerrillas Ceñar Engarbullar Cenaoscuras Engarfiar Descifrable Abalar Cenestesia Incruento Incorrecto Incorporo Abacorar Cendalí Cencero Generalato Incrasar Engarmarse Fichar Fideero Gemología Fidalgo Cendrada Fidelidad Descerebración Generalidad Batato Engarrafador Incorporalmente Abada Generacional Batanar Descerco Increpar Descifrar Gencianáceo Incrédulamente Fideero Generacional Abalar','2020-10-01 20:00:12','http://placeimg.com/640/480/people',4),(NULL,'SubGerente Factores Representante','Gemoso Deschapar Incristalizable Géminis Batanear Engarzar Bateador Bastoncillo Engastadura Bastonazo Cenaoscuras Descerar Cenagar Fideicomisario Incrustación Abacero Basurear Cencuate Deschavetado Gemiquear Cencerrillas Fideicomisario Geneático Cenagoso Engastadura Abadiado Cenefa Gemólogo Gemoso Incorporeidad Cendolilla Abalar Descerrumarse Fideero Cencerrado Gemoso Incorruptibilidad Batanear Cenestesia Cencerrón Incorporalmente Abajadero Incorpóreo Gemonias Fichaje Generalísimo Batalán Descifrar Cendrada Abajar Generacional Fideero Abalar Generación Deschuponar Gemología Batalla Increpador Batalán Fidedigno Cenegar Fideicomitente Engargante Fidalgo Abajamiento Abad Descerebrar Increíble Descentralizar Genearca Incorporalmente Gemiqueo Ficha Incorruptamente Engarnio Incremento Batahola Bastonada Increpar Generador Abalanzar Abadejo Cencerra Engaritar Incruento Increado Engarbullar Descerrajar Bastoncillo Batatazo Descentralizar Engarbullar Cencero Batanear Abalaustrado Abajera Incruento Fido Fideicomiso Fidelísimo','2020-10-01 20:00:12','http://placeimg.com/640/480/people',2);
+Executing (default): SELECT `id`, `titulo`, `contenido`, `fecha_creacion`, `imagen`, `id_autor` FROM `articulos` AS `articulo` WHERE `articulo`.`id` <= 6;
