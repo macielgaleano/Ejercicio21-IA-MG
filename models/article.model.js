@@ -7,20 +7,17 @@ const sequelize = require('./sequelize');
 const Article = require('./articles_sequalize');
 
 module.exports = {
-  article_create: () => {
+  create: () => {
     Article.create({
 
     })
   },
-  article_index: (req,res) => {
-    Article.findAll({
+  index: async(req,res) => {
+    const articles = await Article.findAll({
       // attributes:[ 'id_articulo'] 
     })
-    .then(users => { 
-      return users  })
-    .catch(error => {
-      return error
-    })
+    console.log(articles)
+    return articles;
   }
 }
 

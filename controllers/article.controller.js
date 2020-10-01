@@ -1,11 +1,10 @@
-const ArticleModel = require('../models/article.model');
+const Article = require('../models/article.model');
 const { body,check, validationResult } = require('express-validator');
-const articleModel = require('../models/article.model');
 
 const article_controller = {
   
-  index: () => {
-    articleModel.article_index()
+  index: async (req, res) => {
+    res.json(await Article.index())
   }
 }
 
