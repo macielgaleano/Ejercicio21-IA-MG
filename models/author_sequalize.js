@@ -4,13 +4,13 @@ const sequelize = require("./sequelize");
 class Author extends Model {}
 Author.init(
   {
-    nombre: DataTypes.STRING(100),
-    apellido: DataTypes.STRING(100),
-    email: DataTypes.STRING(100),
+    nombre: { type: DataTypes.STRING(100), allowNull: false },
+    apellido: { type: DataTypes.STRING(100), allowNull: false },
+    email: { type: DataTypes.STRING(100), allowNull: true },
   },
   {
     sequelize,
-    modelName: "autor",
+    modelName: "Author",
     timestamps: false,
   }
 );

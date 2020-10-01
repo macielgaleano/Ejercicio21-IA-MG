@@ -1,28 +1,32 @@
 const Author = require("./author_sequalize");
+const faker = require("faker");
 
 module.exports = {
-  index: function () {
-    console.log("index");
+  index: async () => {
+    const autores = await Author.findAll();
+    const data = [];
+    autores.forEach(({ dataValues: { id, nombre, apellido } }) =>
+      data.push({ id, nombre, apellido })
+    );
+
+    return data;
   },
 
   destroy: (id) => {
     Author.destroy({
       where: {
-        id_autor: id,
+        id: id,
       },
-    }).then(() => {
-      console.log("¡Autor eliminado!");
     });
   },
 
-  create: (nombre, apellido, email) => {
-    Author.create({
+  create: async (nombre, apellido, email) => {
+    const autor = await Author.create({
       nombre: nombre,
       apellido: apellido,
       email: email,
-    })
-      .then(console.log(`Se agrego ${autor} a la base!`))
-      .catch(console.log("error"));
+    });
+    console.log(`Se agrego a ${autor.nombre} ${autor.apellido}`);
   },
 
   modify: function () {
