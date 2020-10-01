@@ -1,5 +1,5 @@
-const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = require('./sequelize');
+const { Sequelize, Model, DataTypes } = require("sequelize");
+const sequelize = require("./sequelize");
 
 class Article extends Model{}
 Article.init({
@@ -13,6 +13,5 @@ Article.init({
   modelName: 'articulo',
   timestamps: false,
 });
-
 
 module.exports = Article;

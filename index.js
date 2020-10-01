@@ -1,21 +1,27 @@
-const express = require('express');
+require("dotenv").config();
+const express = require("express");
 const app = express();
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-require('./routes.js')(app);
 app.use(express.static("public"));
 const { Sequelize, Model, DataTypes } = require('sequelize');
 const sequelize = require('./models/sequelize');
+const mysql2 = require("mysql2");
+require("./models/author_sequalize.js");
+require("./models/comment_sequalize.js");
+const routes = require("./routes.js");
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
-app.listen(5000, function (){
-  sequelize.sync({force: true})
+sequelize
+  .sync({ force: false })
   .then(() => {
-    console.log('echoTestSequelize: Connected')
+    console.log("echoTestSequelize: Connected");
   })
-  .catch(error => {
-    console.log('echoTestSequelizeError: ', error)
-  })
-});
+  .catch((error) => {
+    console.log("echoTestSequelizeError: ", error);
+  });
+routes(app);
 
+app.listen(3000, function () {});

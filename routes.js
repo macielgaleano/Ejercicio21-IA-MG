@@ -1,6 +1,7 @@
 const { param } = require("express-validator");
 const article_controller = require("./controllers/article.controller");
 const article_model = require("./models/article.model");
+const Author = require("./controllers/author.controller");
 
 
 module.exports = function(app){
@@ -24,6 +25,11 @@ module.exports = function(app){
     }
     //  let article = await articles.find((item,index,arr) => {item.i === req.params.id})
   
+    app.get("/autor", (req, res) => {
+      Author.create("Juan", "Rulfo", "juan@rulfo.com");
+      res.send("Nuevo autor");
+    });
  })
 
 }
+
