@@ -234,3 +234,14 @@ INSERT INTO `COMENTARIO` (`ID_COMENTARIO`,`COMENTARIO`,`ID_ARTICULO`,`AUTOR_COME
 INSERT INTO `COMENTARIO` (`ID_COMENTARIO`,`COMENTARIO`,`ID_ARTICULO`,`AUTOR_COMENTARIO`,`FECHA_COMENTARIO`) VALUES (98,"magnis dis parturient montes, nascetur ridiculus mus. Proin vel arcu eu odio tristique pharetra. Quisque ac libero nec ligula consectetuer rhoncus. Nullam velit dui, semper et, lacinia vitae, sodales",86,"Flynn","2020-08-25 22:42:44");
 INSERT INTO `COMENTARIO` (`ID_COMENTARIO`,`COMENTARIO`,`ID_ARTICULO`,`AUTOR_COMENTARIO`,`FECHA_COMENTARIO`) VALUES (99,"lacus. Quisque purus sapien, gravida non, sollicitudin a, malesuada id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt",69,"Macy","2019-12-11 02:47:17");
 INSERT INTO `COMENTARIO` (`ID_COMENTARIO`,`COMENTARIO`,`ID_ARTICULO`,`AUTOR_COMENTARIO`,`FECHA_COMENTARIO`) VALUES (100,"arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris sapien, cursus",59,"Libby","2020-05-18 02:38:21");
+
+
+CREATE TABLE IF NOT EXISTS `articulos` 
+(`id` INTEGER NOT NULL auto_increment , 
+`id_articulo` INTEGER, `titulo` VARCHAR(255), 
+`contenido` VARCHAR(255), `fecha_creacion` 
+DATETIME, `imagen` VARCHAR(255), `id_autor` 
+INTEGER, `createdAt` DATETIME NOT NULL, 
+`updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): 
+SELECT `id`, `id_articulo`, `titulo`, `contenido`, `fecha_creacion`, `imagen`, `id_autor`, `createdAt`, `updatedAt` FROM `articulos` AS `articulo`;
