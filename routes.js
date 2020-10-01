@@ -1,7 +1,14 @@
 const article_controller = require("./controllers/article.controller");
+const article_model = require("./models/article.model");
+
+
 module.exports = function(app){
-  const article_controller = require('./controllers/article.controller');
 
-  app.get('/', article_controller.index);
+  app.get('/', (req,res) => {
+    res.redirect('/articulos');
+  });
 
+  app.get('/articulos', (req,res) => {
+    article_controller.index(req,res);
+  })
  }

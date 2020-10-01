@@ -5,32 +5,30 @@ const sequelize = require('./sequelize');
 var faker = require('faker');
 faker.locale = "es_MX";
 const Article = require('./articles_sequalize');
+const { random } = require('./sequelize');
 
 module.exports = {
   index: async(req,res) => {
     const articles = await Article.findAll({
-      // attributes:[ 'id_articulo'] 
     })
     console.log(articles)
     return articles;
   },
   load_db: (quantity) => {
-    let articles = [];
+    let articles2 = [];
 
-    for (let i = 0; i < quantity; i++) {
-      articles.push({
-        id_articulo: i,
+    for (let i = 1 ; i < quantity-1; i++) {
+      articles2.push({
+        id_articulo: faker.random.number() ,
         titulo: faker.name.title(),
         contenido: faker.lorem.words(100),
         fecha_creacion: faker.time.recent(),
-        imagen: faker.image.dataUri(),
-        id_autor: () => {
-          return Math.round(Math.random() * (5 - 1) + 1);
-       },
+        imagen: faker.image.people(),
+        id_autor: faker.random.arrayElement([1,2,3,4,5]) 
+       ,
       });
     }
-
-    User.bulkCreate(articles);
+    Article.bulkCreate(articles2);
   },
   create: () => {
     Article.create({
