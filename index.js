@@ -5,9 +5,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-require('./controllers/article.controller')(app);
-require('./controllers/api.controller')(app);
-require('./controllers/admin.controller')(app);
+require('./routes.js')(app);
 app.use(express.static("public"));
 const config = require('./configs/db_config');
 const mysql2 = require('mysql2');

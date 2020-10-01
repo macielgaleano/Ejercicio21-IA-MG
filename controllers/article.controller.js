@@ -1,10 +1,9 @@
-module.exports = function(app){
-  const ArticleModel = require('../models/article.model');
-  const { body,check, validationResult } = require('express-validator');
+const ArticleModel = require('../models/article.model');
+const { body,check, validationResult } = require('express-validator');
+const articleModel = require('../models/article.model');
 
-  app.get('/' , (req,res) => {
-    console.log(ArticleModel.article_index());
-    res.send(ArticleModel.article_index());
-  })
+const article_controller = {
+  index: () => {articleModel.article_index()}
+}
 
- }
+module.exports = article_controller;
