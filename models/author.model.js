@@ -15,8 +15,8 @@ module.exports = {
   author_selected: async (id_autor) => {
     const autorSerched = await Author.findAll({
       where: {
-        id: id_autor
-      }
+        id: id_autor,
+      },
     });
     return await autorSerched;
   },
@@ -24,12 +24,11 @@ module.exports = {
   load_authors: (quantity) => {
     let autores = [];
 
-    for (let i = 1 ; i < quantity-1; i++) {
+    for (let i = 1; i < quantity - 1; i++) {
       autores.push({
         nombre: faker.name.firstName(),
         apellido: faker.name.lastName(),
-        email: faker.internet.email()
-       
+        email: faker.internet.email(),
       });
     }
     Author.bulkCreate(autores);
@@ -52,7 +51,18 @@ module.exports = {
     console.log(`Se agrego a ${autor.nombre} ${autor.apellido}`);
   },
 
-  modify: function () {
-    //proximo
+  modify: async (id, nombre, apellido, email) => {
+    await Author.update(
+      {
+        nombre: nombre,
+        apellido: apellido,
+        email: email,
+      },
+      {
+        where: {
+          id: id,
+        },
+      }
+    );
   },
 };

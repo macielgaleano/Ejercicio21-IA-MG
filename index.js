@@ -14,7 +14,6 @@ const routes = require("./routes.js");
 
 app.set("view engine", "ejs");
 
-
 routes(app);
 sequelize
   .sync({ force: true })
@@ -24,4 +23,6 @@ sequelize
   .catch((error) => {
     console.log("echoTestSequelizeError: ", error);
   });
-app.listen(3000, function () {});
+routes(app);
+
+app.listen(process.env.APP_PORT, function () {});
