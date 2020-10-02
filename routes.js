@@ -20,8 +20,6 @@ module.exports = function (app) {
     for (let i = 0; i < articles.length; i++) {
       if (Number(articles[i].id) === Number(req.params.id)) {
         res.render("pages/article.view.ejs", { 
-          articles: await article_controller.index(req, res),
-          authors: await Author.index(req,res),
           article: articles[i],
           author:  await Author.authorSelected( articles[i].id_autor)
            });
