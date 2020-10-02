@@ -10,11 +10,9 @@ const { random } = require('./sequelize');
 module.exports = {
   index: async(req,res) => {
     const articles = await Article.findAll({
-      where: {
-        id: {
-          [Op.lte]: 6
-        } 
-      }
+      // where: {
+
+      // }
     })
     return articles;
   },
@@ -26,9 +24,9 @@ module.exports = {
         id_articulo: faker.random.number() ,
         titulo: faker.name.title(),
         contenido: faker.lorem.words(100),
-        fecha_creacion: `${faker.image.nature()}?random=${Date.now()}`,
-        imagen: faker.image.nature(),
-        id_autor: faker.random.arrayElement([1,2,3,4,5]) 
+        fecha_creacion: faker.date.recent(),
+        imagen: `${faker.image.nature()}?random=${Date.now()}`,
+        id_autor: faker.random.arrayElement([1,2,3]) 
        ,
       });
     }

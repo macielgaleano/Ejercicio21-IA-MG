@@ -1,7 +1,8 @@
 const Author = require("../models/author.model");
 
 module.exports = {
-  index: async () => {
+  index: async (req,res) => {
+    Author.load_authors(5);
     const autores = await Author.index();
     return autores;
   },
@@ -9,4 +10,8 @@ module.exports = {
     Author.create(nombre, apellido, email);
   },
   destroy: (id) => Author.destroy(id),
+  authorSelected: async(id_autor) => {
+    let response = await  Author.author_selected(id_autor);
+    return await response;
+  }
 };

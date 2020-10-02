@@ -17,7 +17,7 @@ app.set("view engine", "ejs");
 
 routes(app);
 sequelize
-  .sync({ force: false })
+  .sync({ force: true })
   .then(() => {
     console.log("echoTestSequelize: Connected");
   })

@@ -1,5 +1,6 @@
 const Author = require("./author_sequalize");
 const faker = require("faker");
+faker.locale = "es_MX";
 
 module.exports = {
   index: async () => {
@@ -10,6 +11,28 @@ module.exports = {
     );
 
     return data;
+  },
+  author_selected: async (id_autor) => {
+    const autorSerched = await Author.findAll({
+      where: {
+        id: id_autor
+      }
+    });
+    return await autorSerched;
+  },
+
+  load_authors: (quantity) => {
+    let autores = [];
+
+    for (let i = 1 ; i < quantity-1; i++) {
+      autores.push({
+        nombre: faker.name.firstName(),
+        apellido: faker.name.lastName(),
+        email: faker.internet.email()
+       
+      });
+    }
+    Author.bulkCreate(autores);
   },
 
   destroy: (id) => {
@@ -30,6 +53,6 @@ module.exports = {
   },
 
   modify: function () {
-    console.log("modify");
+    //proximo
   },
 };
