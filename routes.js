@@ -31,6 +31,13 @@ module.exports = function (app) {
   });
   //  let article = await articles.find((item,index,arr) => {item.i === req.params.id})
 
+  app.get('/dropdown', async (req,res) => {
+    res.render("partial/dropdown.view.ejs", {
+      articles: await article_controller.index(req, res),
+      authors: await Author.index(req,res)
+    });
+  })
+
   app.get("/autor/:id", async (req, res) => {
     Author.create("Juan", "Rulfo", "juan@gmail.com");
     Author.destroy(req.params.id);
