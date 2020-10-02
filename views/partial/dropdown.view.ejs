@@ -6,7 +6,7 @@
   </button>
   <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
     <% for(var i=0; i<articles.length; i++) {%>
-      <div class="dropdown-item label-item" href="#">
+      <div class="dropdown-item label-item" href="#" id=''>
         <div class="row">
           <a class='col-8' href="<%-'/articulo/' + articles[i].id%>"><%- articles[i].id+ ' - '+ articles[i].titulo %></a> 
           <div name="" id="" class="ml-5 col-2 btn btn-danger btn-left" href="<%- '/articulo/eliminar/' +  articles[i].id %>" role="button">Accion</div> 
