@@ -16,21 +16,24 @@ module.exports = {
     })
     return articles;
   },
-  load_db: (quantity) => {
+  load_db: async (quantity) => {
     let articles2 = [];
-
-    for (let i = 1 ; i < quantity-1; i++) {
-      articles2.push({
-        id_articulo: faker.random.number() ,
-        titulo: faker.name.title(),
-        contenido: faker.lorem.words(100),
-        fecha_creacion: faker.date.recent(),
-        imagen: `${faker.image.nature()}?random=${Date.now()}`,
-        id_autor: faker.random.arrayElement([1,2,3]) 
-       ,
-      });
-    }
-    Article.bulkCreate(articles2);
+    let articles_count = await Article.count({});
+    console.log(articles_count);
+    if(await !articles_count) {
+      for (let i = 1 ; i < quantity-1; i++) {
+        articles2.push({
+          id_articulo: faker.random.number() ,
+          titulo: faker.name.title(),
+          contenido: faker.lorem.words(100),
+          fecha_creacion: faker.date.recent(),
+          imagen: `${faker.image.nature()}?random=${Date.now()}`,
+          id_autor: faker.random.arrayElement([1,2,3]) 
+         ,
+        });
+      }
+      Article.bulkCreate(articles2);
+     }
   },
   create: () => {
     Article.create({

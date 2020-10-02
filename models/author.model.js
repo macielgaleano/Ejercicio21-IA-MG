@@ -9,7 +9,6 @@ module.exports = {
     autores.forEach(({ dataValues: { id, nombre, apellido } }) =>
       data.push({ id, nombre, apellido })
     );
-
     return data;
   },
   author_selected: async (id_autor) => {
@@ -21,17 +20,20 @@ module.exports = {
     return await autorSerched;
   },
 
-  load_authors: (quantity) => {
+  load_authors: async (quantity) => {
     let autores = [];
-
-    for (let i = 1; i < quantity - 1; i++) {
-      autores.push({
-        nombre: faker.name.firstName(),
-        apellido: faker.name.lastName(),
-        email: faker.internet.email(),
-      });
+    let authors_count = await Author.count({});
+    console.log(authors_count);
+    if(await !authors_count) {
+      for (let i = 1; i < quantity - 1; i++) {
+        autores.push({
+          nombre: faker.name.firstName(),
+          apellido: faker.name.lastName(),
+          email: faker.internet.email(),
+        });
+      }
+      Author.bulkCreate(autores);
     }
-    Author.bulkCreate(autores);
   },
 
   destroy: (id) => {

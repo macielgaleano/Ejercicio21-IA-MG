@@ -25,4 +25,4 @@ sequelize
   });
 routes(app);
 
-app.listen(process.env.APP_PORT, function () {});
+app.listen(3000, function () {});

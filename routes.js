@@ -49,4 +49,11 @@ module.exports = function (app) {
     );
     res.send(autores);
   });
+
+  app.get('/admin', (req,res) => {
+    res.render("pages/admin.view.ejs")
+  })
+
 };
+
+
