@@ -17,3 +17,18 @@
 .content-text {
   text-align: justify;
 }
+
+.label-item {
+  width: 500px;
+  color: black;
+}
+
+.label-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+} 
+
+.dropdown-color {
+  padding: 10px 50px;
+}

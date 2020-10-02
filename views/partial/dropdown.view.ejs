@@ -1,11 +1,18 @@
 <%- include('../partial/head.view.ejs'); %>
 
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle bg-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle dropdown-color bg-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Articulos
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action <div name="" id="" class="ml-5 btn btn-danger" href="#" role="button">Accion</div> </a>
+  <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+    <% for(var i=0; i<articles.length; i++) {%>
+      <div class="dropdown-item label-item" href="#">
+        <div class="row">
+          <a class='col-8' href="<%-'/articulo/' + articles[i].id%>"><%- articles[i].id+ ' - '+ articles[i].titulo %></a> 
+          <div name="" id="" class="ml-5 col-2 btn btn-danger btn-left" href="rutaX" role="button">Accion</div> 
+        </div>
+      </div>
+    <% } %> 
   </div>
 </div>
 
