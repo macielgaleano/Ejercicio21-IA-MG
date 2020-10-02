@@ -21,14 +21,13 @@ module.exports = function (app) {
       if (Number(articles[i].id) === Number(req.params.id)) {
         res.render("pages/article.view.ejs", {
           article: articles[i],
-          author: await Author.authorSelected(articles[i].id_autor),
+          author: await Author.select(articles[i].id_autor),
         });
-        console.log(await Author.authorSelected(articles[i].id_autor));
+        console.log(await Author.select(articles[i].id_autor));
       }
     }
   });
-  //  let article = await articles.find((item,index,arr) => {item.i === req.params.id})
-
+  
   app.get("/dropdown", async (req, res) => {
     res.render("partial/dropdown.view.ejs", {
       articles: await article_controller.index(req, res),
@@ -55,6 +54,16 @@ module.exports = function (app) {
     res.render("pages/admin.view.ejs", {
       authors: await Author.index()
     })
+  })
+
+  app.post('/admin/crearAutor', async (req,res) => {
+    console.log(req.body);
+    Author.create(req.body.name,req.body.surname,req.body.email);
+    res.redirect('/admin')
+  })
+
+  app.post('/admin/crear',  (req,res) => {
+    console.log(req.body);
   })
 
 };

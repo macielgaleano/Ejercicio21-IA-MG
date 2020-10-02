@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-6 center">
-      <form action="" method="post" class="">
+      <form action="/admin/crear" method="POST" enctype="multipart/form-data" class="">
         <h2 class="m-5 display-5 text-center">Crear un articulo</h2>
         <div class="form-group">
-          <label for="name">Titulo</label>
+          <label for="title">Titulo</label>
           <input type="text"
-            class="form-control mb-3" name="name" id="name" aria-describedby="helpId" placeholder="Ingrese un titulo...">
+            class="form-control mb-3" name="title" id="title" aria-describedby="helpId" placeholder="Ingrese un titulo...">
           <label for="contenido">Contenido</label>
           <textarea class="form-control mb-3" name="contenido" id="contenido" rows="5" placeholder="Ingrese contenido..."></textarea>
           <label for="date">Fecha</label>
@@ -20,12 +20,12 @@
                 <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Autores
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu" id="selected" aria-labelledby="dropdownMenuButton">
                   <% for(var i=0; i<authors.length; i++) {%>
                     <div class="dropdown-item " href="#" id=''>
                       <div class="row">
                         <div class="col-8">
-                          <p href=""><%- authors[i].id + ' - ' +  authors[i].nombre + ' ' + authors[i].apellido%></p>
+                          <p id="selected" href=""><%- authors[i].id + ' - ' +  authors[i].nombre + ' ' + authors[i].apellido%></p>
                         </div>
                       </div>
                     </div>
@@ -40,9 +40,10 @@
             
             <div class="col-5">
               <input type="text"
-              class="form-control mb-3" name="id" id="id" aria-describedby="helpId" placeholder="ID...">
+              class="form-control mb-3" name="id" id="id_input" aria-describedby="helpId" placeholder="ID...">
             </div>
           </div>
+            <button name="" id="" class="btn btn-success p-2 mt-4" href="" type='submit' role="button">Crear articulo</button>
         </div>
       </form>
       <div id="myModal" class="modal">
@@ -50,32 +51,29 @@
           <div class="modal-content">
             <div class="">
               <h2 class="title text-center">Agregar autor</h2>
-              <div class="row center">
-                <div class="col-2"></div>
-                <div class="col-8 mt-3 mb-3">
-                  <label for="name">Nombre</label>
-                  <input type="text"
-                    class="form-control mb-3" name="name" id="name" aria-describedby="helpId" placeholder="Ingrese un nombre...">
-                  <label for="name">Apellido</label>
-                  <input type="text"
-                    class="form-control mb-3" name="surname" id="surname" aria-describedby="helpId" placeholder="Ingrese un apellido...">
-                  <label for="email">Email</label>
-                  <input type="email"
-                    class="form-control mb-3" name="email" id="email" aria-describedby="helpId" placeholder="Ingrese un email...">
-                </div>
-                <div class="col-2">
-                </div>
+                <form action="/admin/crearAutor" method="POST" class="row center">
+                  <div class="col-2"></div>
+                  <div class="col-8 mt-3 mb-3">
+                    <label for="name">Nombre</label>
+                    <input type="text"
+                      class="form-control mb-3" name="name" id="name" aria-describedby="helpId" placeholder="Ingrese un nombre...">
+                    <label for="name">Apellido</label>
+                    <input type="text"
+                      class="form-control mb-3" name="surname" id="surname" aria-describedby="helpId" placeholder="Ingrese un apellido...">
+                    <label for="email">Email</label>
+                    <input type="email"
+                      class="form-control mb-3" name="email" id="email" aria-describedby="helpId" placeholder="Ingrese un email...">
+                    <div class="botones">
+                      <button name="" id="" type='submit' class="close btn" href="#" role="button">Agregar autor</button>
+                      <button name="" id="" class="close btn" href="#" role="button">Cancelar</button>
+                    </div>
+                  </div>
+                  <div class="col-2"></div>
+                </form>
               </div>
-              <div class="botones">
-                <button name="" id="" class="close btn" href="#" role="button">Agregar autor</button>
-                <button name="" id="" class="close btn" href="#" role="button">Cancelar</button>
-              </div>
-            </div>
+            </div>    
           </div>
-        </div>
-          <!-- <span class="close">&times;</span> -->
         </div>
       </div>
     </div>
   </div>
-</div>

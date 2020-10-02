@@ -21,3 +21,12 @@ window.onload = function () {
     }
   });
 };
+
+$(document).ready(function () {
+  $('#selected').click(function () {
+    var selectedText = $(this).find("option:selected").text();
+    console.log(selectedText);
+    $("#id_input").text(selectedText);
+  });
+});
+
