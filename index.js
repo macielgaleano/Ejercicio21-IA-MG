@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("public"));
 const { Sequelize, Model, DataTypes } = require("sequelize");
 const sequelize = require("./models/sequelize");
 const mysql2 = require("mysql2");
@@ -16,7 +16,7 @@ app.set("view engine", "ejs");
 
 routes(app);
 sequelize
-  .sync({ force: false })
+  .sync({ force: true })
   .then(() => {
     console.log("echoTestSequelize: Connected");
   })

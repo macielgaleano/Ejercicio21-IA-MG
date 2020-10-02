@@ -62,7 +62,7 @@ module.exports = function (app) {
     res.redirect('/admin')
   })
 
-  app.post('/admin/crear',  (req,res) => {
+  app.post('/admin/crear', (req,res) => {
     console.log(req.body);
   })
 
