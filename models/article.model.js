@@ -10,8 +10,6 @@ const { random } = require("./sequelize");
 module.exports = {
   index: async (req, res) => {
     const articles = await Article.findAll({
-      // where: {
-      // }
     });
     return articles;
   },
