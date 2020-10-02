@@ -24,7 +24,9 @@
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
     "faker": "^5.1.0",
+    "formidable": "^1.2.2",
     "i": "^0.3.6",
+    "moment": "^2.29.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"

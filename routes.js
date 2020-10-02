@@ -2,6 +2,8 @@ const { param } = require("express-validator");
 const article_controller = require("./controllers/article.controller");
 const Article = article_controller;
 const Author = require("./controllers/author.controller");
+const formidable = require("formidable");
+const moment = require("moment");
 
 module.exports = function (app) {
   app.get("/", (req, res) => {
@@ -27,7 +29,6 @@ module.exports = function (app) {
       }
     }
   });
-  //  let article = await articles.find((item,index,arr) => {item.i === req.params.id})
 
   app.get("/dropdown", async (req, res) => {
     res.render("partial/dropdown.view.ejs", {
@@ -38,7 +39,7 @@ module.exports = function (app) {
 
   app.get("/dropdown/:id", async (req, res) => {
     const article = await Article.select(req.params.id);
-    res.render("partial/delete.view.ejs", {
+    res.render("partial/modify.view.ejs", {
       article: article,
       author: await Author.select(article.id_autor),
     });
@@ -47,16 +48,29 @@ module.exports = function (app) {
   app.get("/dropdown/:id/eliminar", async (req, res) => {
     const article = await Article.select(req.params.id);
     await Article.destroy(article.id);
-
     res.redirect("/dropdown");
   });
 
-  app.get('/admin', async (req,res) => {
+  app.post("/dropdown/:id/modificar", async (req, res) => {
+    /* const form = formidable({
+      multiples: true,
+      uploadDir: __dirname + "/public/img",
+      keepExtensions: true,
+    });
+    form.parse(req, (err, fields, files) => {
+      res.redirect(`/dropdown/${req.params.id}/modificar`);
+    }); */
+    const fecha_creacion = moment().format();
+
+    const { titulo, contenido } = req.body;
+
+    await Article.modify(req.params.id, titulo, contenido, fecha_creacion);
+    res.redirect(`/dropdown/${req.params.id}`);
+  });
+
+  app.get("/admin", async (req, res) => {
     res.render("pages/admin.view.ejs", {
-      authors: await Author.index()
-    })
-  })
-
+      authors: await Author.index(),
+    });
+  });
 };
-
-
