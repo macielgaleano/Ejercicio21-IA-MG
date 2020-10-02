@@ -1,0 +1,24 @@
+<%- include('./head.view.ejs'); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4 mt-5 mb-5 mt-5 center">
+      <img class='img-fluid' src="<%- article.imagen %>" alt="" srcset="">
+      <% for(var i=0; i<author.length; i++) {%>
+        <small><%- author[i].nombre + ' ' +author[i].apellido %>
+        <a href=""><%- ' - ' + author[i].email %></a>
+        </small>
+      <% } %>
+    </div>
+    <div class="col-8 mt-5 mb-5 center">
+      <h2 class="display-5"><%- article.titulo  %></h2>
+      <small class="mb-5"><%- article.fecha_creacion %></small>
+      <p class="lead mt-5 content-text"><%- article.contenido %></p>
+      .<a name="" id="" class="btn btn-primary" href="/articulos/" role="button">Volver</a>
+
+    </div>
+  </div>
+</div>
+
+
+<%- include('./end-body.view.ejs'); %>

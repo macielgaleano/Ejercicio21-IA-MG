@@ -12,13 +12,14 @@ module.exports = {
 
     return data;
   },
-  author_selected: async (id_autor) => {
-    const autorSerched = await Author.findAll({
+  select: async (id) => {
+    const selected = await Author.findAll({
       where: {
-        id: id_autor,
+        id: id,
       },
     });
-    return await autorSerched;
+
+    return selected[0].dataValues;
   },
 
   load_authors: (quantity) => {

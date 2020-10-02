@@ -10,9 +10,9 @@ module.exports = {
     Author.create(nombre, apellido, email);
   },
   destroy: (id) => Author.destroy(id),
-  authorSelected: async (id_autor) => {
-    let response = await Author.author_selected(id_autor);
-    return await response;
+  select: async (id) => {
+    const selected = await Author.select(id);
+    return selected;
   },
   modify: (id, nombre, apellido, email) => {
     Author.modify(id, nombre, apellido, email);
