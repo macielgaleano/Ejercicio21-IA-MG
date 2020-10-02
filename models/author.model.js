@@ -29,7 +29,18 @@ module.exports = {
     console.log(`Se agrego a ${autor.nombre} ${autor.apellido}`);
   },
 
-  modify: function () {
-    console.log("modify");
+  modify: async (id, nombre, apellido, email) => {
+    await Author.update(
+      {
+        nombre: nombre,
+        apellido: apellido,
+        email: email,
+      },
+      {
+        where: {
+          id: id,
+        },
+      }
+    );
   },
 };

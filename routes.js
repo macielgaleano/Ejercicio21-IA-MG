@@ -29,6 +29,13 @@ module.exports = function (app) {
     Author.create("Juan", "Rulfo", "juan@gmail.com");
     Author.destroy(req.params.id);
     const autores = await Author.index();
+    console.log(req.params.id);
+    Author.modify(
+      Number(req.params.id) + 1,
+      "Pedro",
+      "Paramo",
+      "pedro@gmail.com"
+    );
     res.send(autores);
   });
 };

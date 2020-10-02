@@ -24,4 +24,4 @@ sequelize
   });
 routes(app);
 
-app.listen(3000, function () {});
+app.listen(process.env.APP_PORT, function () {});

@@ -9,4 +9,7 @@ module.exports = {
     Author.create(nombre, apellido, email);
   },
   destroy: (id) => Author.destroy(id),
+  modify: (id, nombre, apellido, email) => {
+    Author.modify(id, nombre, apellido, email);
+  },
 };
