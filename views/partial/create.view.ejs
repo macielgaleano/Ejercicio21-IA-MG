@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 center">
+      <form action="" method="post" class="">
+        <div class="form-group">
+          <label for="name">Titulo</label>
+          <input type="text"
+            class="form-control mb-3" name="name" id="name" aria-describedby="helpId" placeholder="Ingrese un titulo...">
+          <label for="contenido">Contenido</label>
+          <textarea class="form-control mb-3" name="contenido" id="contenido" rows="5" placeholder="Ingrese contenido..."></textarea>
+          <label for="date">Fecha</label>
+          <input class='form-control mb-3' type="datetime-local" name="date" id="date">
+          <label for="img">Imagen</label>
+          <input type="file" class="form-control-file" name="img" id="img" placeholder="" aria-describedby="fileHelpId">
+          <small id="fileHelpId" class="form-text text-muted">Inserte un archivo JPG o PNG</small>
+          <div class="row mt-3">
+            <div class="col-3">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Autores
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <% for(var i=0; i<authors.length; i++) {%>
+                    <div class="dropdown-item " href="#" id=''>
+                      <div class="row">
+                        <div class="col-8">
+                          <p href=""><%- authors[i].id + ' - ' +  authors[i].nombre + ' ' + authors[i].apellido%></p>
+                        </div>
+                      </div>
+                    </div>
+                  <% } %> 
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <a name="add-author" id="add-author" class="btn btn-secondary" href="#" role="button">+ Agregar Autor</a>
+            </div>
+            <div class="col-5">
+              <input type="text"
+              class="form-control mb-3" name="id" id="id" aria-describedby="helpId" placeholder="ID...">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

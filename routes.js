@@ -50,8 +50,10 @@ module.exports = function (app) {
     res.send(autores);
   });
 
-  app.get('/admin', (req,res) => {
-    res.render("pages/admin.view.ejs")
+  app.get('/admin', async (req,res) => {
+    res.render("pages/admin.view.ejs", {
+      authors: await Author.index()
+    })
   })
 
 };

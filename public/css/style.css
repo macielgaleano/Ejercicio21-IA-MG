@@ -32,3 +32,11 @@
 .dropdown-color {
   padding: 10px 50px;
 }
+
+.center {
+  margin: 40px auto;
+}
+
+.form-group {
+  border: none;
+}
