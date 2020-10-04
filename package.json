@@ -1,32 +1,19 @@
 {
-  "name": "ej22",
+  "name": "Ej21",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/finalstory2/Ejercicio21-IA-MG.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/finalstory2/Ejercicio21-IA-MG/issues"
-  },
-  "homepage": "https://github.com/finalstory2/Ejercicio21-IA-MG#readme",
   "dependencies": {
-    "Faker": "^0.7.2",
-    "axios": "^0.20.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "express-validator": "^6.6.1",
     "faker": "^5.1.0",
-    "formidable": "^1.2.2",
-    "i": "^0.3.6",
-    "moment": "^2.29.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"

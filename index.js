@@ -1,28 +1,41 @@
 require("dotenv").config();
+const {
+  db_LoadArticles,
+  db_LoadAuthors,
+  db_LoadComments,
+} = require("./seeder.js");
 const express = require("express");
+const { routes } = require("./routes");
+const {
+  sequelize,
+  Sequelize,
+  Article,
+  Author,
+  Comment,
+} = require("./models/index");
+
 const app = express();
+const port = process.env.APP_PORT;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"));
-const { Sequelize, Model, DataTypes } = require("sequelize");
-const sequelize = require("./models/sequelize");
-const mysql2 = require("mysql2");
-require("./models/author_sequalize.js");
-require("./models/comment_sequalize.js");
-const routes = require("./routes.js");
-
+// Configuracion app
+app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 
-routes(app);
+// Sequelize
 sequelize
   .sync({ force: true })
   .then(() => {
-    console.log("echoTestSequelize: Connected");
+    console.log("Tablas creadas!");
   })
+  /// Cargo articulos a la tabla
+  .then(() => db_LoadAuthors(Author, 5))
+  .then(() => db_LoadArticles(Article, 5))
+  .then(() => db_LoadComments(Comment, 5))
   .catch((error) => {
     console.log("echoTestSequelizeError: ", error);
   });
+
 routes(app);
 
-app.listen(3000, function () {});
+app.listen(port, () => console.log(`Servidor escuchando en puerto: ${port}`));

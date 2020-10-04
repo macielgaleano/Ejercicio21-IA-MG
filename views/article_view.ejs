@@ -1,0 +1,48 @@
+<%- include('./partials/head_view.ejs'); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4 mt-5 mb-5 mt-5 center">
+      <img class="img-fluid" src="<%- article.imagen %>" alt="" srcset="" />
+
+      <small
+        ><%- author.nombre + ' ' +author.apellido %>
+        <a href=""><%- ' - ' + author.email %></a>
+      </small>
+    </div>
+    <div class="col-8 mt-5 mb-5 center">
+      <h2 class="display-5"><%- article.titulo %></h2>
+      <small class="mb-5"><%- article.fecha_creacion %></small>
+      <p class="lead mt-5 content-text"><%- article.contenido %></p>
+      .<a name="" id="" class="btn btn-primary" href="/articulos/" role="button"
+        >Volver</a
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2>Comentarios</h2>
+      <ul class="list-group list-group-flush">
+        <% comments.forEach( comment => { %>
+        <li class="lead mt-5 content-text list-group-item">
+          <div class="d-flex justify-content-between unstyled">
+            <p class="pr-3"><b><%- comment.autor_comentario %>: </b></p>
+            <p><%- comment.comentario %></p>
+          </div>
+          <small><%-comment.fecha_comentario %></small>
+        </li>
+        <% }); %>
+      </ul>
+      <br />
+      <form action="" method="post">
+        <div class="form-group my-5">
+          <label for="comment">Ingrese su comentario</label>
+          <input type="text" class="form-control" id="comment" />
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/end-body_view.ejs'); %>
