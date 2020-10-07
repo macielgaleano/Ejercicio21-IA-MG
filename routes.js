@@ -72,10 +72,7 @@ module.exports = function (app) {
   app.post('/admin/crear', (req,res) => {
     console.log(req.body);
   })
-
-
     const { titulo, contenido } = req.body;
-
     await Article.modify(req.params.id, titulo, contenido, fecha_creacion);
     res.redirect(`/dropdown/${req.params.id}`);
   });
